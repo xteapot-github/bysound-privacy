@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bysound data attribution</title>
+  <style>
+    :root { color-scheme: light; --ink: #1a1a1a; --muted: #4a4a4a; --bg: #f7f4ef; --accent: #2f5d50; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+    main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; color: var(--accent); }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); }
+    footer { margin-top: 3rem; font-size: 0.9rem; color: var(--muted); border-top: 1px solid #ddd; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Bysound data attribution</h1>
+
+    <p>Thai By Sound Keyboard (Bysound) suggests Thai words using word and word-pair frequencies counted from openly licensed text. Only these counts are bundled in the app. No transcript, web page or sentence text is bundled, and nothing you type is used.</p>
+
+    <h2>YouTube transcripts (Thai, from app version 0.88)</h2>
+    <p>Part of the Thai counts come from YouTube video transcripts published in two datasets:</p>
+    <ul>
+      <li><a href="https://huggingface.co/datasets/aisingapore/WangchanLION-Curated">WangchanLION-Curated</a> by AI Singapore: only rows whose licence is <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (9,372 videos).</li>
+      <li><a href="https://huggingface.co/datasets/espnet/yodas">YODAS</a> by ESPnet / WAVLab, Thai subset th000, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> (6,502 videos; every video in our training split, a few of which were then removed by filters).</li>
+    </ul>
+    <p>The full list of channels and videos is here: <a href="youtube-thai-v0.88.tsv">youtube-thai-v0.88.tsv</a> (tab-separated: source, channel, video URL; YODAS does not record channel names).</p>
+    <p>Changes: the transcripts were filtered (music, spam and offensive text removed), split into words and counted. Only word and word-pair frequencies are used in the app.</p>
+
+    <h2>Other sources</h2>
+    <p>The full list of word-list and text sources, with licences, is in the app under Settings &rarr; Open-source notices.</p>
+
+    <footer>Thai By Sound Keyboard (Bysound) by xteapot · <a href="../">Privacy policy</a></footer>
+  </main>
+</body>
+</html>
