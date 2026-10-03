@@ -19,7 +19,7 @@
 <body>
   <main>
     <h1>Bysound Privacy Policy</h1>
-    <p class="meta">Effective date: 2026-09-25 · Last updated: 2026-09-27 · Applies to app version 0.85.0-alpha</p>
+    <p class="meta">Effective date: 2026-09-25 · Last updated: 2026-10-03 · Applies to app version 0.9.0-alpha.1</p>
 
     <p>Thai By Sound Keyboard (Bysound) is published by xteapot. xteapot is the developer responsible for the app and for this privacy policy.</p>
 
@@ -28,15 +28,22 @@
     <h2>What the app processes</h2>
     <ul>
       <li>Characters you type into supported text fields (handled in memory on the device)</li>
+      <li><strong>Text around the cursor.</strong> Up to 48 characters of existing text just before and just after the cursor, to pick the previous and next word for ranking. This happens only in fields that allow suggestions, never in password, email, web address (URI), or filter fields. The “Use text after the cursor” switch turns off both reads. This text is read in memory for the current suggestion only. It is never stored and never sent anywhere.</li>
       <li>Suggestion ranking from English and Thai word lists bundled inside the app</li>
     </ul>
 
     <h2>Data that stays on your device</h2>
     <ul>
       <li><strong>Settings.</strong> Preferences such as language, typing style, auto-correct, haptic feedback, and sound are stored only on your device.</li>
-      <li><strong>Personal dictionary (optional, off by default).</strong> If you turn this on in Keyboard settings or Trust Center, committed words and short phrases are saved in app-private files on your device. They are never uploaded. Turning the switch off stops saving and stops using that list. You can clear stored entries in Settings.</li>
-      <li><strong>Suggestion-priority adjustments.</strong> An explicit long-press on a suggestion strip word can save a priority adjustment in app-private files on your device. This is separate from the personal dictionary. You can clear it in Settings. These adjustments are never used in password, email, web address (URI), or filter fields.</li>
-      <li><strong>Local diagnostics (on by default).</strong> Simple on-device counters and latency samples are shown in Settings or Trust Center. You can turn them off. They stay on your device and are not collected by the developer, xteapot.</li>
+      <li><strong>Save words: personal words and word pairs (optional, off by default).</strong> If you turn on Save words (“Save my words and sentences”) in Keyboard settings or Trust Center, words and short phrases you pick are saved in app-private files on your device. A saved word is suggested only after you have picked it twice.
+        <ul>
+          <li><strong>Personal word pairs.</strong> While Save words is on, the keyboard also keeps Thai word-pair counts in the same app-private folder. When you pick a suggestion right after another word, it stores the two words and how many times you picked that pair. It keeps up to 2,000 pairs and stores no times and no other text; older counts halve every 2,000 picks. Next-word suggestions then adapt to your picks. A pair is used only after you have picked it twice.</li>
+          <li>None of this is ever uploaded. Turning Save words off stops saving and stops using the saved words and pair counts. “Clear personal dictionary” in Settings deletes the saved words and pair counts.</li>
+        </ul>
+      </li>
+      <li><strong>Suggestion-priority adjustments.</strong> A long-press on a suggestion strip word can adjust its priority. Adjustments are saved in app-private files only while Save words is on (off by default). Otherwise they last only for the current keyboard session and are not written. You can clear them in Settings. Password, email, web address (URI), and filter fields never save or rank from saved words, pairs, or adjustments.</li>
+      <li><strong>Remember language per app (optional, off by default).</strong> If you turn this on, a list of app package names and the language you last used in each is kept in private settings on your device and never uploaded. Turning it off deletes that list. From version 0.87, updating from an older version turns this off once and deletes any stored list.</li>
+      <li><strong>Local diagnostics (“Record local counters”, optional, off by default).</strong> Simple on-device counters and latency samples, shown in Settings or Trust Center. They stay on your device and are not collected by the developer, xteapot. From version 0.87 they are off by default, and updating from an older version turns them off once.</li>
     </ul>
 
     <h2>What we do not do</h2>
@@ -60,7 +67,7 @@
       <li>This policy: <a href="https://xteapot-github.github.io/bysound-privacy/">https://xteapot-github.github.io/bysound-privacy/</a></li>
     </ul>
 
-    <footer>Thai By Sound Keyboard (Bysound) by xteapot · Effective 2026-09-25 · Last updated 2026-09-27 · Version 0.85.0-alpha</footer>
+    <footer>Thai By Sound Keyboard (Bysound) by xteapot · Effective 2026-09-25 · Last updated 2026-10-03 · Version 0.9.0-alpha.1</footer>
   </main>
 </body>
 </html>
