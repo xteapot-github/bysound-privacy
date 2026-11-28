@@ -19,7 +19,7 @@
 <body>
   <main>
     <h1>Bysound Privacy Policy</h1>
-    <p class="meta">Effective date: 2026-09-25 · Last updated: 2026-11-22 · Applies to app version 0.9.1-alpha.6</p>
+    <p class="meta">Effective date: 2026-09-25 · Last updated: 2026-11-28 · Applies to app version 0.9.1-alpha.6</p>
 
     <p>Thai By Sound Keyboard (Bysound) is published by xteapot. xteapot is the developer responsible for the app and for this privacy policy.</p>
 
@@ -50,10 +50,11 @@
     <h2>Clipboard</h2>
     <p>The “Recent copies on keyboard” switch is <strong>on by default</strong>.</p>
     <ul>
-      <li><strong>Switch off.</strong> Bysound does not register for clipboard changes, does not read the clipboard when the keyboard opens, and does not read it while drawing the keyboard. Turning the switch off deletes recent copies from memory immediately. Pinned copies stay in the file until you unpin them or clear history.</li>
-      <li><strong>What is read (switch on).</strong> While the keyboard is on screen in an ordinary text field, Bysound reads the text already on the newest clipboard item and keeps the first 512 characters, stopping one character early if that cut would split an emoji. It does not open links or files on the clipboard: a clip that is only a link or an intent is skipped. Android may hand the whole clip to the app; Bysound does not read past those 512 characters. It is read when the keyboard opens, when you copy something while it is open, and when you tap “Paste from clipboard”. While the keyboard is hidden, Bysound does not listen for clipboard changes. What is kept or shown is trimmed and limited to those 512 characters.</li>
+      <li><strong>Switch off.</strong> Bysound does not register for clipboard changes. It does not read the clipboard when the keyboard opens, while drawing the keyboard, or from the Clipboard tool. Turning the switch off deletes recent copies from memory immediately. Pinned copies stay in the file until you unpin them or clear history.</li>
+      <li><strong>What is read (switch on).</strong> While the keyboard is on screen in an ordinary text field, Bysound reads the text already on the newest clipboard item. It keeps the first 512 characters, and stops one character early if that cut would split an emoji. It does not open links or files. A clip that is only a link or an intent is skipped. Android may hand the whole clip to the app. Bysound does not read past those 512 characters. It reads when the keyboard opens, when you copy something while it is open, when you tap “Paste from clipboard”, and when you tap Clipboard on the strip toolbar (the ⋯ button) in the middle of a field. That tool is offered only in a field that shows clip text. While the keyboard is hidden, Bysound does not listen for clipboard changes. What is kept or shown is trimmed and limited to those 512 characters. If the field opened without the clipboard row, a copy made while the keyboard is open shows as one paste chip in the suggestion bar, under the same rules. The chip goes away when you type or when you tap it. A text, visible, or web password field hides suggestions. When the clipboard is allowed there, the suggestion bar stays as an empty band from the start of the field, so a paste chip has a place and the keyboard does not move. The band shows that chip and nothing else. In that field the chip is dots (••••). Keeping the band does not read anything more. On an ordinary text field, autocomplete off still shows suggestions. It does not use the empty band, and the paste chip shows the clip text. A number PIN shows no clipboard row and no band.</li>
       <li><strong>Not read and not recorded.</strong> Incognito mode, and any field that sets Android’s no-personalized-learning flag (including an incognito browser tab), hide the row. Nothing is read and nothing is recorded there. Email, web-address, search-filter, and other non-text fields are not read. In password fields (except number PINs, which show no row) the current text copy may show as dots (••••) so you can paste it; it is not stored. With the switch on, and not in incognito or a no-learning field, a clip Android marks as sensitive (Android 13 and later) may be read the same way — the text already on the item, first 512 characters, links and files not opened — only to show those dots. It is never stored, never pinned, and never shown as readable text. In every other field a sensitive clip is not read and not shown.</li>
-      <li><strong>What is kept.</strong> Up to 8 recent copies, in memory only. A recent copy stops showing one hour after the keyboard last saw it. An expired copy leaves memory the next time the strip is read, when a copy is recorded or pinned, when you clear history, or when the keyboard process stops. Turning the switch off removes every recent copy at once. If you long-press a copy to pin it, up to 8 pinned copies are saved as text (no times) in an app-private file on the device until you unpin them or clear history.</li>
+      <li><strong>Each copy is offered once.</strong> The clipboard row, or the paste chip, shows a copy in the keyboard show where it first appears. When the keyboard hides, that copy is not offered again until something new is copied. Copying the same text again counts as a new copy. Typing, or tapping the paste chip, retires that chip at once. Pinned copies still keep the row. Bysound tells copies apart by the time Android gave that copy. While the keyboard is open that time is offeredClip. After the keyboard hides it is retiredClip. Both stay in memory only. They are the time, not the clip text. They are never stored and never sent. A copy with no time is not retired.</li>
+      <li><strong>What is kept.</strong> Up to 8 recent copies, in memory only. A recent copy stops showing one hour after the keyboard last saw it. An expired copy leaves memory the next time the strip is read, when a copy is recorded or pinned, when you clear history, or when the keyboard process stops. Turning the switch off removes every recent copy at once. If you long-press a copy to pin it, up to 8 pinned copies are saved as text (no times) in an app-private file on the device, files/clipboard-strip/pins.txt, until you unpin them or clear history.</li>
       <li><strong>Bysound never sends it anywhere.</strong> The app has no Internet permission, and its data is excluded from Android backup and device-to-device transfer. Pasting puts the text into the app you are typing in, and the system clipboard belongs to Android.</li>
       <li><strong>Turning it off:</strong> Settings → Privacy on device → “Recent copies on keyboard”. “Clear clipboard history” in the same section deletes pinned and recent copies; it does not change the system clipboard.</li>
     </ul>
@@ -64,6 +65,7 @@
       <li>No accounts or cloud sync</li>
       <li>No ads</li>
       <li>No analytics or crash reporting to us or to third parties</li>
+      <li>Release builds never print typed or suggested words to Android system diagnostics (dumpsys / bug reports).</li>
       <li>No collection of your data off the device, and no sharing of your data with third parties</li>
       <li>No access to location, contacts, photos, or similar categories</li>
       <li>Android backups and device-to-device transfer of app data are disabled</li>
@@ -79,7 +81,7 @@
       <li>This policy: <a href="https://xteapot-github.github.io/bysound-privacy/">https://xteapot-github.github.io/bysound-privacy/</a></li>
     </ul>
 
-    <footer>Thai By Sound Keyboard (Bysound) by xteapot · Effective 2026-09-25 · Last updated 2026-11-22 · Version 0.9.1-alpha.6</footer>
+    <footer>Thai By Sound Keyboard (Bysound) by xteapot · Effective 2026-09-25 · Last updated 2026-11-28 · Version 0.9.1-alpha.6</footer>
   </main>
 </body>
 </html>
